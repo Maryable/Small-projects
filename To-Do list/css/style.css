@@ -1,0 +1,153 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(120deg, rgb(217, 198, 252),rgb(82, 114, 237)) center/cover no-repeat;
+}
+
+/* iPhone X scren size */
+.screen {
+    position: relative;
+    width: 375px;
+    height: 812px;
+    background:#fff;
+    margin: 50px auto;
+    box-shadow: 0px 0px 30px rgba(92, 92, 92, 0.5);
+    border-radius: 30px;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+    padding: 8px 20px;
+    color: silver;
+    padding-top: 18px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+header > .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(191, 143, 223, 0.9);
+    background: url("../imgs/avatar-girl-1.jpg") center/cover no-repeat;
+}
+
+header .avatar > img {
+    width: 100%;
+    height: 100%;
+}
+
+
+header p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #898989;
+}
+
+header i {
+    font-size: 26px;
+    color: rgba(191, 143, 223, 0.6);
+}
+
+/* TO-DO List area */
+section {
+    position: relative;
+    width: 100%;
+    height: 672px;
+    padding: 10px;
+}
+
+.list {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.1);
+    line-height: 50px;
+}
+
+.list span {
+    padding-left: 20px;
+    float: left;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.trash-btn {
+    float: right;
+    margin-right: 16px;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    background: #29DDAE;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+}
+
+.trash-btn img {
+    width: 14px;
+    height: 18px;
+    margin-top: 6px;
+}
+
+
+/* text-area */
+.type-area {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 99%;
+    
+}
+
+input[type=text] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: #fff;
+    color: #29DDAE;
+    font-weight: 200;
+    padding: 8px;
+    box-shadow: 0px 0px 1px rgba(0,0,0,0.1) inset;
+}
+
+input::placeholder {
+    color: #3f3f3f;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    text-indent: 5px;
+}
+
+/* footer area */
+footer {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    box-shadow: 1px 0px 3px rgba(0,0,0,0.1);
+}
+
+.plus-btn {
+    width: 60px;
+    height: 60px;
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.plus-icon {
+    font-size: 36px;
+    line-height: 60px;
+    color:#fff;
+}

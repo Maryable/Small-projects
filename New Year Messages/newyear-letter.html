@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <!-- snow library -->
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+        <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <!-- og tag -->
+    <meta property="og:image" content="https://media.giphy.com/media/SPe79hbsl22IzyQgGQ/giphy.gif">
+    <meta property="og:title" content="Send my love">
+    <meta property="og:description" content="2020을 얼릉 보내버리자">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poor Story', cursive;
+        }
+
+        body {
+            background-color: #9b070f;
+        }
+
+        .envelope {
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid black; */
+            background: url('https://media.giphy.com/media/duuOhKVbKQO8B4YcYB/giphy.gif') center/cover no-repeat;
+            margin: 200px auto 30px auto;
+            cursor: pointer;
+        }
+
+        .message {
+            color: white;
+            text-align: center;
+        }
+        .rtan {
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://media.giphy.com/media/NsKiCmWdA96V4w10N5/giphy.gif');
+            background-size: cover;
+            background-position: center;
+            margin: 100px auto 30px auto;
+            box-shadow: 0px 00px 10px 10px white;
+            /* 가로,세로 치우치는것, 10px얼마나 뿌얘지는가, 보더값, 색상 */
+            border-radius: 100px;
+        }
+        .messagebox {
+            width: 400px;
+            height: 300px;
+            background-color: ivory;
+            padding: 30px;
+            color: brown;
+            line-height: 35px;
+            font-size: 20px;
+            text-align: center;
+            margin: 0 auto;
+            box-shadow: 0px 00px 5px 5px white;
+        }
+        h1 {
+            color: white;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .messagebox p {
+            text-align: right;
+        }
+        
+        .letter-close {display: block;}
+        .letter-open {display: none;}  
+
+        @media screen and (max-width:760px) {
+            .messagebox {
+                width: 300px;
+                padding: 20px;
+            }
+
+            .rtan {
+                width: 150px;
+                height: 150px;
+                margin: 20px auto;
+            }
+
+            h1 {
+            color: white;
+            margin: 20px auto;
+            font-size: 20px;
+            text-align: center;
+            }  
+        }
+    </style>
+
+    <script>
+        function open_btn() {
+            document.getElementsByClassName("letter-close")[0].style.display= 'none';
+            document.getElementsByClassName("letter-open")[0].style.display='block';
+        }
+        function go_alert() {
+            alert("Hey~ Check out my prject!");
+            window.location.href='https://github.com/Maryable'
+        }
+    </script>
+    
+</head>
+
+<body>
+    <div class="letter-close">
+        <div class="envelope" onclick="open_btn()"></div>
+        <h2 class="message">봉투를 클릭하세요</h2>
+    </div>
+
+    <div class="letter-open">
+        <div class="rtan" onclick="go_alert()"></div>
+        <h1>2020년 수고 많았어!</h1>
+        <div class="messagebox">
+            2020년이 1주일 남았네 <br />
+            올해 이런저런 일이 많았는데 <br />
+            여러분 덕분에 힘을 낼 수 있었어 <br />
+            내년에도 우리 희망을 잃지 말자 <br />
+            연말에도 연초에도 못 봐서 아쉽다 <br />
+            코로나 잠잠해 지면 꼭 만나자 ^_^ <i class="far fa-grin-stars"></i> <br />
+            <p>2020.12.26 고은이가</p>
+        </div>
+    </div>
+</body>
+
+</html>

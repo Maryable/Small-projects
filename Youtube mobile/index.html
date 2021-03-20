@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/css.css">
+    <title>Youtube Mobile</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <!-- fontawsome kitcode -->
+    <script src="https://kit.fontawesome.com/b3711eecd7.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <!-- header+section.player+section.info+section.UpNext-->
+    <!-- 결과 화면
+    <header></header>
+    <section class="player"></section>
+    <section class="info"></section>
+    <section class="UpNext"></section> -->
+    <header>
+        <div class="logo"><i class="fab fa-youtube"></i>
+            <span class="title">Youtube</span>
+        </div>
+        <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-ellipsis-v"></i>
+        </div>
+        <!-- 아이콘은 ul,li 태그를 사용해서 만들어도 되고 div button을 사용해도 됨 -->
+    </header>
+
+
+    <!-- video player -->
+    <section class="player">
+        <video controls src="video/JVPD4174.MP4"></video>
+    </section> <!-- video player end -->
+
+<!-- info와 upnext 부분이 크기가 커지면 
+    정렬이 다르게 되어야 하기 때문에 
+    한꺼번에 묶어 놓고 작업한다. -->
+    <div class="infoAndupNext"> 
+        <!--info -->
+    <section class="info">
+        <!-- .metadata+.actions+.channel -->
+        <div class="metadata">
+            <!-- ul.hashtags+titleAndButton+.views -->
+            <ul class="hashtags">
+                <li>#Cats</li>
+                <li>#Dominos</li>
+                <li>#Cat toys</li>
+            </ul>
+            <div class="titleAndButton">
+                <span class="title">우리 고양이가 화가나서 쇼파뜯고 놀아주려고 손을 갖다 대니까 
+                    으르렁대네요. 밤만 되면 에너지가 넘치는 우리 고양이 정말 귀엽다리~ 
+                    우리 고양이와 함께 놀아보세요~ 우리집에 놀러 오세요~ </span>
+                <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+            </div>
+            <span class="views">32K •2020. 3. 14.</span>
+        </div> <!--meta data end-->
+
+        <div class="actions">
+            <!-- (li>button)*5 -->
+            <li><button><i class="active fas fa-thumbs-up"></i><span>61k</span></button></li>
+            <li><button><i class="fas fa-thumbs-down"></i><span>2k</span></button></li>
+            <li><button><i class="fas fa-share"></i><span>Share</span></button></li>
+            <li><button><i class="fas fa-plus"></i><span>Save</span></button></li>
+            <li><button><i class="fas fa-flag"></i><span>Report</span></button></li>
+        </div> <!--actions end-->
+
+        <!-- channel discriptions -->
+        <div class="channel">
+            <div class="metadata">
+                <img src="images/avatar.jpg" alt="avatar"/>
+                <!-- .info>span.name+span.subscribers -->
+                <div class="info">
+                    <span class="name">Cat Jerry</span>
+                    <span class="subscribers">Subscribers 38.6k</span>
+                </div>
+            </div>
+            <button class="supscribe">Subscribe</button>
+        </div> <!-- channel discriptions end-->
+    </section> <!--info end-->
+
+
+    <!-- Up NExt -->
+    <section class="upNext">
+        <span class="title">Up next</span>
+        <!-- ul>li.item*3 -->
+        <ul>
+            <li class="item">
+                <div class="img"><img src="images/thumb1.PNG" alt="thumbnail1"></div>
+                <div class="info">
+                    <span class="title">Teaching cats to ring a bell</span>
+                    <span class="name">Maryland Cat</span>
+                    <span class="views">166k views</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+            </li>
+
+            <li class="item">
+                <div class="img"><img src="images/thumb2.PNG" alt="thumbnail2"></div>
+                <div class="info">
+                    <span class="title">Cats and a Bell</span>
+                    <span class="name">Maryland Cat</span>
+                    <span class="views">300k views</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+            </li>
+
+            <li class="item">
+                <div class="img"><img src="images/thumb3.PNG" alt="thumbnail3"></div>
+                <div class="info">
+                    <span class="title"> Reducing Hole for the Cat. When will he stop?</span>
+                    <span class="name">Maryland Cat</span>
+                    <span class="views">205k views</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+            </li>
+
+            <li class="item">
+                <div class="img"><img src="images/thumb3.PNG" alt="thumbnail3"></div>
+                <div class="info">
+                    <span class="title"> Reducing Hole for the Cat. When will he stop?</span>
+                    <span class="name">Maryland Cat</span>
+                    <span class="views">205k views</span>
+                </div>
+                <button class="moreBtn"><i class="fas fa-caret-down"></i></button>
+            </li>
+        </ul>
+    </section> <!--upnext end-->
+    </div> <!--infoAndupNext end-->
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- snow library -->
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+        <!-- font awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <!-- og tag -->
+    <meta property="og:image" content="https://media.giphy.com/media/3o6fJcIM6mG3Ad6lAk/giphy.gif">
+    <meta property="og:title" content="Open the link! It's not a junk mail">
+    <meta property="og:description" content="Happy New Year">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comfortaa', cursive;
+        }
+
+        body {
+            background-color: #0c5e94;
+            /* red color : #9b070f */
+        }
+
+        .envelope {
+            width: 200px;
+            height: 200px;
+            /* border: 1px solid black; */
+            background: url('https://media.giphy.com/media/duuOhKVbKQO8B4YcYB/giphy.gif') center/cover no-repeat;
+            margin: 300px auto 30px auto;
+            cursor: pointer;
+        }
+
+        .message {
+            color: white;
+            text-align: center;
+        }
+
+        .circle {
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            background-image: url('https://media.giphy.com/media/NsKiCmWdA96V4w10N5/giphy.gif');
+            background-size: cover;
+            background-position: center;
+            margin: 150px auto 30px auto;
+            box-shadow: 0px 00px 10px 10px white;
+            /* 가로,세로 치우치는것, 10px얼마나 뿌얘지는가, 보더값, 색상 */
+            border-radius: 100px;
+            cursor: pointer;
+        }
+        .messagebox {
+            width: 400px;
+            height: 400px;
+            background-color: ivory;
+            padding: 30px;
+            color: brown;
+            line-height: 28px;
+            font-size: 18px;
+            font-weight: 200;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 50px;
+            box-shadow: 0px 00px 5px 5px white;
+        }
+        h1 {
+            color: white;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .messagebox p {
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        
+        .letter-close {display: block;}
+        .letter-open {display: none; margin-top: 100px;}   
+
+        @media screen and (max-width:760px) {
+            .envelope {
+                margin: 250px auto 30px auto;
+            }
+            .messagebox {
+                width: 320px;
+                height: 350px;
+                padding: 18px;
+                font-size: 16px;
+                line-height: 25px;
+            }
+
+            .circle {
+                width: 150px;
+                height: 150px;
+                margin: 25px auto;
+                cursor: pointer;
+            }
+
+            h1 {
+            color: white;
+            margin: 30px auto;
+            font-size: 25px;
+            text-align: center;
+            }  
+        }
+    </style>
+
+    <script>
+        function open_btn() {
+            document.getElementsByClassName("letter-close")[0].style.display= 'none';
+            document.getElementsByClassName("letter-open")[0].style.display='block';
+        }
+        function go_alert() {
+            alert("Dive into my code");
+            window.location.href='https://github.com/Maryable'
+        }
+    </script>
+    
+</head>
+
+<body>
+    <div class="letter-close">
+        <div class="envelope" onclick="open_btn()"></div>
+        <h2 class="message"> 👆 Click 👆</h2>
+    </div>
+
+    <div class="letter-open">
+        <div class="circle" onclick="go_alert()"></div>
+        <h1> Happy New Year 2021 🎉 </h1>
+        <div class="messagebox">
+            I’m so proud of everything you accomplished this year 🤞 <br />
+            It was such a tough and long year,<br />
+            but you did a good job in 2020 !<br />
+            So I can’t wait to see what you do in 2021 😊👍 <br />
+            I hope you discover everything you are looking for
+            in the new year right inside yourself!<br />
+            <p>✨ Have a promising <br> and fulfilling New Year ✨</p>
+            2020.12.31 From. Goeun
+        </div>
+    </div>
+</body>
+
+</html>

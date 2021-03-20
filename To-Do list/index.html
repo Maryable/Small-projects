@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- style Sheet -->
     <link rel="shortcut icon" type="images/png" href="imgs/favicon.png">
-    <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery CDN -->
     <script defer src="js/main.js" ></script>
     <!-- javascript -->
 </head>
@@ -30,22 +30,22 @@
 
             <!-- list area -->
         <section>
-            <ul class="list">
-                <li class="item-list">
+            <ul class="items">
+                <li class="todo-list">
                     <div class="item">
-                        <span>Finish the side project </span>
-                        <button class="trash-btn"><img src="imgs/trash.svg" alt=""></button>
+                        <span class="list__name">Finish the side project </span>
+                        <button class="trash-btn"><img src="imgs/trash.svg" alt="delete button"></button>
                     </div>
+                    <div class="item__divider"></div>
                 </li>
             </ul>
         </section>
-
         <!-- plus button area -->
         <footer>
-            <div class="type-area"><input type="text" id="type-area" placeholder="Type what you need to do"></div>
-            <div class="plus-btn">
-                <i class="xi-plus-thin plus-icon"></i>
+            <div class="type-area">
+                <input type="text" id="type-area" placeholder="Type what you need to do">
             </div>
+            <button class="plus-btn"><i class="xi-plus-thin plus-icon"></i></button>
         </footer>
     </div> <!-- screen end -->
 </body>

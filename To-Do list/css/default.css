@@ -1,3 +1,38 @@
+/* Global */
+:root {
+    /* Color */
+    --color-white: #ffffff;
+    --color-light-white: #eeeeee;
+    --color-dark-white: #bdbdbd;
+    --color-pink: #f5afad;
+    --color-dark-pink: #ff6863;
+    --color-dark-grey: #4d4d4d;
+    --color-grey: #616161;
+    --color-light-grey: #7c7979;
+    --color-blue: #73aace;
+    --color-yellow: #fff7d1;
+    --color-orange: #feb546;
+    --color-black: #000000;
+  
+    /* Font size */
+    --font-large: 48px;
+    --font-medium: 28px;
+    --font-regular: 18px;
+    --font-small: 16px;
+    --font-micro: 14px;
+  
+    /* Font weight */
+    --weight-bold: 700;
+    --weight-semi-bold: 600;
+    --weight-regular: 400;
+  
+    /* size */
+    --size-border-raidus: 4px;
+  
+    /* Animation */
+    --animation-duration: 300ms;
+  }
+  
   /* universal tags */
   body {
     font-family: 'Raleway', "Noto Sans KR";
@@ -15,10 +50,36 @@
     outline: 0;
   }
   
-  button , input {
+  button {
     background-color: transparent;
     cursor: pointer;
     border: none;
-    outline: none;
   }
   
+
+/* scrollbar style */
+::-webkit-scrollbar{width: 6px;}
+::-webkit-scrollbar-track{
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+  background-color:rgba(191, 143, 223, 0.6);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover{
+  background-color: rgba(146, 61, 202, 0.6);
+}
+
+::-webkit-scrollbar-button:start:document,
+::-webkit-scrollbar-button:end:increment {
+  width: 6px;
+  height: 6px;
+  background: #8f8f8f;
+}
+
+  .ir_so {overflow: hidden; 
+    position:absolute; 
+    width:0; height:0; 
+    line-height:0; 
+    text-indent:-9999px;
+  } 

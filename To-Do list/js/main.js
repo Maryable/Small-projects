@@ -1,57 +1,61 @@
-const items = document.querySelector('.items');
-const input = document.querySelector('#type-area');
+const items = document.querySelector('.lists'); // ul 태그 
 const addBtn = document.querySelector('.plus-btn');
-const trash = document.querySelector('.trash-btn');
+const input = document.querySelector('#type-area');
 
 function onAdd() {
-
-    // 1. 사용자가 입력한 텍스트를 받아옴
-    const text = input.value;
-    //input에 있는 텍스트는 value라는 값을 통해서 받아올 수 있다.
-    console.log(text);
-    if( text === '') {
-        input.focus();
-        return;
-    }
-
-    // 2. 새로운 아이템을 만듬 (텍스트 + 삭제 버튼)
-    const item = createItem();
-    // 3. items 컨테이너 안에 새로 만든 아이템을 추가한다.
-    items.appendChild(item);
-    // 4. 인풋을 초기화한다.
-    input.value = '';
+  // 사용자가 입력한 텍스트 받아오기
+  const text = input.value;
+  // console.log(text);
+  if(text ==='') {
+    alert('There is nothing to add? 🤷‍♀️');
     input.focus();
+    return;
+  }
+
+  // 새로운 아이템 만들기 ==텍스트, 삭제버튼
+  const item = createItem(text);
+  // 아이템즈 컨테이너 안에 새로 만든 아이템 추가
+  items.appendChild(item);
+  // 스크롤링 상태에서 새로운 아이템이 보여지도록
+  item.scrollIntoView({ block:'center'});
+  //인풋 초기화 
+  input.value = '';
+  input.focus();
 }
 
-function createItem (text) {
-    // 전달받은 text 입력
-    const itemList = document.createElement('li');
-    itemList.setAttribute('class', 'todo-list');
+function createItem(text) {
+  const itemRow = document.createElement('li');
+  itemRow.setAttribute('class', 'item-row');
 
-    const item = document.createElement('div');
-    itemList.setAttribute('class', 'item');
+  const item = document.createElement('div');
+  item.setAttribute('class', 'item');
 
-    const name = document.createElement('span');
-    name.setAttribute('class', 'list__name');
-    name.innerText=text;
+  const name = document.createElement('span');
+  name.setAttribute('class', 'todo-name');
+  name.innerText = text;
 
-    const deleteBtn = document.createElement('button');
-    deleteBtn.setAttribute('class','trash-btn');
-    deleteBtn.innerHTML = '<img src="imgs/trash.svg" alt="delete button">';
-    deleteBtn.addEventListener('click', ()=> {
-        items.removeChild(itemList);
-    });
+  const delBtn = document.createElement('button');
+  delBtn.setAttribute('class', 'trash-btn');
+  delBtn.innerHTML = '<img src="imgs/trash.svg" alt="delete list">';
 
-    const itemDivider = document.createElement('div');
-    itemDivider.setAttribute('class', 'item__divider');
+  delBtn.addEventListener('click', ()=>{
+    items.removeChild(itemRow);
+    // ul의 li 한 줄을 지운다.
+  });
 
-    item.appendChild(name);
-    item.appendChild(deleteBtn);
-    itemList.appendChild(item);
-    itemList.appendChild(itemDivider);
-    return itemList;
+  item.appendChild(name);
+  item.appendChild(delBtn);
+  itemRow.appendChild(item);
+  return itemRow;
 }
 
-addBtn.addEventListener('click', ()=> {
+addBtn.addEventListener('click', ()=>{
+  onAdd();
+});
+
+input.addEventListener('keypress', event =>{
+  // 엔터키로 리스트 추가
+  if(event.key ==='Enter') {
     onAdd();
+  }
 });

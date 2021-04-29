@@ -3,8 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO_DO_LIST || Mary's project</title>
+    <title>What to do today</title>
     <meta name="description" content="side project">
+    <meta name="author" content="Goeun Mary Lee">
+    <!-- description -->
+    <meta property="og:title" content="To Do List">
+    <meta property="og:description" content="Keep the tasks that you have to do">
+    <meta property="og:image" content="https://cdn.pixabay.com/photo/2017/06/10/07/18/list-2389219_960_720.png">
+    <!-- og tags -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- google fonts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
@@ -14,39 +20,45 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- style Sheet -->
     <link rel="shortcut icon" type="images/png" href="imgs/favicon.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script defer src="js/main.js" ></script>
     <!-- javascript -->
 </head>
 <body>
-    <div class="screen">
-        <!-- header area -->
-        <header>
-            <i class="xi-bars"></i>
-            <p>TO-DO List</p>
-            <div class="avatar"></div>
-        </header>
+<div class="screen">
+    <!-- header area -->
+    <header>
+        <i class="xi-bars"></i>
+        <p>TO-DO List</p>
+        <div class="avatar"></div>
+    </header>
 
-            <!-- list area -->
-        <section>
-            <ul class="items">
-                <li class="todo-list">
-                    <div class="item">
-                        <span class="list__name">Finish the side project </span>
-                        <button class="trash-btn"><img src="imgs/trash.svg" alt="delete button"></button>
-                    </div>
-                    <div class="item__divider"></div>
-                </li>
-            </ul>
-        </section>
-        <!-- plus button area -->
-        <footer>
-            <div class="type-area">
-                <input type="text" id="type-area" placeholder="Type what you need to do">
-            </div>
-            <button class="plus-btn"><i class="xi-plus-thin plus-icon"></i></button>
-        </footer>
-    </div> <!-- screen end -->
+        <!-- list area -->
+    <section>
+        <h4 class="ir_so">리스트가 표시되는 구간입니다.</h4>
+        <ul class="lists">
+            <!-- <li class="item-row">
+                <div class="item">
+                    <span class="todo-name">Finish the project </span>
+                    <button class="trash-btn"><img src="imgs/trash.svg" alt="delete list"></button>
+                </div>
+            </li> -->
+        </ul>
+    </section>
+
+    <!-- plus button area -->
+    <footer>
+        <div class="type-area"><input type="text" id="type-area" 
+            placeholder="Type what you need to do (widthin 30words)"></div>
+        <div class="plus-btn">
+            <i class="xi-plus-thin plus-icon"></i>
+        </div>
+    </footer>
+</div> <!-- screen end -->
+
+<div class="wide-screen">
+    <p>Oops! You can use this app only on a smaller window screen. 🙋‍♀️</p>
+</div>
 </body>
 </html>
